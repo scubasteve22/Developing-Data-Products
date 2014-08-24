@@ -13,13 +13,24 @@ shinyUI(fluidPage(
                                  "Weekly" = 4), selected = 1),
       submitButton('Submit')
     ),
+      
     mainPanel(img(src = "PLPIC.png"), height = 150, width = 6),
+      
+      mainPanel(h5('Basic instructions:')),
+      mainPanel(p('The key to financial stablility is affordability andmaking sure that 
+                  you are able to repay what you borrow.  The purpose of this application 
+                  is to help you understand your financial commitments based upon your loan
+                  requirements.  Simply enter the annual fixed rate, the amount you wish
+                  to borrow and the repayment period for loan and we will tell you your
+                  necessary repayments.  We know that people get paid on different cycles
+                  so you can also change the frequency of payment to meet your needs.  So 
+                  enter your details hit submit and I hope we can help assist you in
+                  your financial wellbeing.')),
+    
     mainPanel(
-      h3('Monthly Repayment ($):'),
+      h4('Monthly Repayment ($):'),
       verbatimTextOutput("prediction")
       
-   #   Your repayment at 13.9% p.a. is $2,087* per month on a fixed rate
-   
     )
   )
 ))
